@@ -1,0 +1,284 @@
+.bold {
+  font-weight: bold; }
+
+.page {
+  max-width: 1200px;
+  display: flex;
+  flex-flow: column wrap;
+  overflow: hidden;
+  justify-content: center;
+  text-align: center; }
+  @media screen and (min-width: 20em) {
+    .page {
+      flex: 100%;
+      max-width: 100%; } }
+  @media screen and (min-width: 30em) {
+    .page {
+      flex: 100%;
+      max-width: 100%; } }
+  @media screen and (min-width: 48em) {
+    .page {
+      flex: 100%;
+      max-width: 100%; } }
+  @media screen and (min-width: 64em) {
+    .page {
+      display: flex;
+      flex-flow: column wrap;
+      max-width: 1200px;
+      margin: 0 auto; } }
+
+.constitution-hero__typewriter {
+  color: #1c1532;
+  font-family: "Merriweather", serif;
+  font-size: 1.8em;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 2px 2px #868e96;
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid #cd52ec;
+  /* The typwriter cursor */
+  white-space: wrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: -0.04em;
+  /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite; }
+  @media screen and (min-width: 20em) {
+    .constitution-hero__typewriter {
+      font-size: 1.1em; } }
+  @media screen and (min-width: 30em) {
+    .constitution-hero__typewriter {
+      font-size: 1.2em; } }
+  @media screen and (min-width: 48em) {
+    .constitution-hero__typewriter {
+      font-size: 1.5em; } }
+  @media screen and (min-width: 64em) {
+    .constitution-hero__typewriter {
+      font-size: 1.7em; } }
+
+.constitution-hero {
+  background: url(../img/constitution-m.jpg) no-repeat;
+  background-size: cover;
+  margin-bottom: 2em;
+  display: flex; }
+  .constitution-hero:hover {
+    filter: grayscale(0%);
+    transition: all 0.3s linear; }
+  .constitution-hero .constitution-hero__inner {
+    padding: 9em 1em;
+    flex: 3 1 100%; }
+  @media screen and (min-width: 20em) {
+    .constitution-hero {
+      background: url(../img/constitution-s.jpg) no-repeat;
+      background-size: cover; }
+      .constitution-hero.constitution-hero__inner {
+        flex: 3 1 100%;
+        padding: 5em 1em;
+        max-width: 100%; } }
+  @media screen and (min-width: 30em) {
+    .constitution-hero {
+      font-size: 1.2em;
+      background: url(../img/constitution-s.jpg) no-repeat;
+      background-size: cover; }
+      .constitution-hero.constitution-hero__inner {
+        flex: 3 1 100%;
+        padding: 5em 1em;
+        padding: 5em 1em;
+        max-width: 100%; } }
+  @media screen and (min-width: 48em) {
+    .constitution-hero {
+      font-size: 1.3em;
+      background: url(../img/constitution-m.jpg) no-repeat;
+      background-size: cover;
+      filter: grayscale(0%); }
+      .constitution-hero.constitution-hero__inner {
+        flex: 3 1 100%;
+        padding: 5em 1em;
+        max-width: 100%; } }
+  @media screen and (min-width: 64em) {
+    .constitution-hero {
+      font-size: 1.5em;
+      background: url(../img/constitution-m.jpg) no-repeat;
+      background-size: cover; }
+      .constitution-hero.constitution-hero__inner {
+        flex: 3 1 100%;
+        padding: 5em 1em;
+        max-width: 100%; } }
+
+.TOC {
+  background: #ffffff;
+  width: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  border-radius: 0.5em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  padding: 1em .5em; }
+  .TOC:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transition: all .3s linear; }
+  .TOC h2 {
+    text-transform: uppercase;
+    font-size: 2em;
+    color: #bc23e3;
+    padding: 1em 1em; }
+  .TOC ol {
+    padding: .6em 2em;
+    font-weight: bold;
+    font-size: 1.2em;
+    line-height: 1.4; }
+    .TOC ol a:focus {
+      color: #868e96; }
+    .TOC ol li {
+      color: #ff6cd9;
+      transition: all .3s linear;
+      padding: .3em 1em; }
+    .TOC ol li:hover {
+      color: #9912bb; }
+  @media screen and (min-width: 20em) {
+    .TOC {
+      padding: .6em 1em;
+      flex: 3 2 100%; }
+      .TOC h2 {
+        font-size: 1.3em; }
+      .TOC ol {
+        font-size: 1em; } }
+  @media screen and (min-width: 30em) {
+    .TOC {
+      padding: .8em 1em;
+      flex: 3 2 100%; }
+      .TOC h2 {
+        font-size: 1.3em; }
+      .TOC ol {
+        font-size: 1em; } }
+  @media screen and (min-width: 48em) {
+    .TOC {
+      padding: 1em 1.5em;
+      flex: 3 2 100%; }
+      .TOC h2 {
+        font-size: 1.3em; }
+      .TOC ol {
+        font-size: 1em; } }
+  @media screen and (min-width: 64em) {
+    .TOC {
+      padding: .6em 2em;
+      flex: 3 1 100%; }
+      .TOC h2 {
+        font-size: 1.3em; }
+      .TOC ol {
+        font-size: 1em; } }
+
+.page__main {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 2em 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  transition: all .3s linear; }
+  .page__main:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+  @media screen and (min-width: 20em) {
+    .page__main {
+      flex: 100%; } }
+  @media screen and (min-width: 30em) {
+    .page__main {
+      flex: 100%; } }
+  @media screen and (min-width: 48em) {
+    .page__main {
+      flex: 100%; } }
+  @media screen and (min-width: 64em) {
+    .page__main {
+      flex: 100%; } }
+
+.accordion {
+  background-color: #ffffff;
+  color: #1c1532;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 18px;
+  max-width: 100%;
+  border: none;
+  text-align: left;
+  text-transform: uppercase;
+  outline: none;
+  font-size: 1em;
+  transition: all .3s linear; }
+  .accordion:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    color: #ffffff; }
+
+.active, .accordion:hover {
+  background-color: #868e96; }
+
+.active {
+  color: #ffffff !important;
+  background: #1c1532 !important; }
+
+.accordion:after {
+  content: '\002B';
+  color: #1c1532;
+  font-weight: bold;
+  float: right;
+  margin-left: .5em; }
+
+.active:after {
+  content: "\2212"; }
+
+.panel {
+  padding: 0 1.125em;
+  background-color: #ffffff;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  width: 96.99%;
+  flex: 3 1 0; }
+  .panel p {
+    color: #1c1532;
+    text-align: left;
+    padding: .8em .3em;
+    font-size: 1.2em;
+    line-height: 1.5;
+    letter-spacing: 0.03; }
+  .panel h4, .panel h5 {
+    font-size: 1.4em;
+    margin-top: 1em;
+    margin-bottom: 0; }
+  .panel ol {
+    padding: .5em 1.2em; }
+  .panel ol > li {
+    list-style: decimal;
+    font-size: 1.2em;
+    padding: .5em .5em; }
+  .panel ul {
+    padding: .5em 1.2em; }
+  .panel ul > li {
+    font-size: 1.2em;
+    padding: .5em .5em;
+    list-style-type: lower-alpha; }
+  @media screen and (min-width: 20em) {
+    .panel {
+      flex: 3 1 100%; } }
+  @media screen and (min-width: 30em) {
+    .panel {
+      flex: 3 1 100%; } }
+  @media screen and (min-width: 48em) {
+    .panel {
+      flex: 3 1 100%; } }
+  @media screen and (min-width: 64em) {
+    .panel {
+      flex: 3 1 100%; } }
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent; }
+  50% {
+    border-color: #cd52ec; } }
+
+/*# sourceMappingURL=constitution.css.map */

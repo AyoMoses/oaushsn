@@ -1,0 +1,309 @@
+@import "variables";
+@mixin deskTopFirst($media) {
+  @media screen and (max-width: $media/16+em) { @content; }
+}
+
+@include deskTopFirst(960) {
+
+}
+@include deskTopFirst(658) {
+
+}
+
+.google-map {
+  max-width: 1080px;
+  margin: 2em auto;
+}
+
+.contact-hero {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background: url(../img/contact_m.jpg) no-repeat;
+  background-size: cover;
+  margin-bottom: 2.5rem;
+  min-width: 100%;
+  height: 80vh;
+
+  & img {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  @include deskTopFirst(960) {
+    flex: 100%;
+    max-width: 100%;
+
+    & img {
+      object-fit: cover;
+      object-fit: cover;
+      padding: 2em 2em;
+    }
+  }
+  @include deskTopFirst(658) {
+    flex: 100%;
+    max-width: 80%;
+
+    & img {
+      object-fit: cover;
+      padding: 2em 2em;
+      max-width: 80%;
+    }
+  }
+}
+.contact-hero__inner {
+  h1 {
+    color: $white;
+    font-size: 2.2em;
+  }
+
+  @include deskTopFirst(960) {
+
+  }
+  @include deskTopFirst(658) {
+  
+  }
+}
+
+.contact-hero .contact-hero__inner {
+  padding: 12.9em 2em; 
+}
+
+.contact__inner {
+  max-width: 1080px;/*THE TWO PROPERTIES CENTERS THE CONTENT IN THE PAGE*/
+  margin: 0 auto; /*SINCE ITS A DOUBLE LAYOUT PATTERN TO CENTER DOCUMENT*/
+  margin-top: 5em;
+  margin-bottom: 4em;
+
+  & h2 {
+    font-size: 2em;
+    color: $brand-purple;
+  }
+
+  & p {
+    font-size: 1.2em;
+    margin: 2em 1em;
+    line-height: 1.9;
+    text-align: left;
+  
+  }
+
+  & .enlarge {
+    font-size: 1.5em;
+    color: $gray;
+  }
+}
+
+.contact-address-container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.contact-row {
+  display: flex;
+  text-align: left;
+  justify-content: space-around;
+  padding: 0 1em;
+
+  @include deskTopFirst(658) {
+    display: flex;
+    flex-flow: column;
+  }
+}
+.contact-col {
+  
+  h4 {
+    color: $brand-purple;
+    text-transform: capitalize;
+    font-size: 1.25em;
+  }
+  p {
+    text-align: left;
+  }
+
+  @include deskTopFirst(658) {
+    flex: 100%;
+    max-width: 100%;
+  }
+  .email {
+    color: $gray;
+    transition: all 0.2s ease-out;
+    text-align: center;
+    margin: .8em 0;
+    &:hover {
+      color: $font-color;
+    }
+  }
+}
+
+
+.contact-forms-container {
+  display: flex;
+  flex-flow: column;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.forms-container {
+  margin: 2em;
+}
+.forms-container > input {
+  flex: 100%;
+  max-width: 100%;
+  margin-bottom: 2em;
+  height: 50px;
+  background: $white;
+  box-shadow: $box-shadow;
+  color: $brand-purple;
+}
+.forms-container > input:focus {
+  box-shadow: $box-shadow-2;
+}
+.forms-container > input[type="email"]::placeholder, input[type="text"]::placeholder, textarea::placeholder {
+  color: $semi-light-gray;
+}
+textarea {
+  width: 100%;
+  height: 60px;
+  color: $brand-purple;
+  outline: none;
+  padding: 1em 1.5em;
+  margin-bottom: 1em;
+  border-radius: .7em;
+  background: $white;
+  box-shadow: $box-shadow;
+  border: none;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s; 
+}
+textarea:focus {
+  border: 2px solid $brand-purple;
+  box-shadow: $box-shadow-2;
+}
+.forms__textarea {
+  height: 160px;
+  padding: 15px;
+}
+
+.contact-address-container >h2 {
+  margin-top: 0;
+}
+.contact-address-container > p {
+  line-height: 2.5em;
+  font-size: 1.2em;
+  color: $footer-color;
+  text-align: left;
+  padding: 0 0.8em;
+}
+
+
+.contact-btn {
+  width: 8em;
+  height: 2.5em;
+  margin: 1.3em 0;
+  border: none;
+  border-radius: .5em;
+  outline: none;
+  padding: .5em .5em;
+  font-weight: 700;
+  font-size: 1.1em;
+  float: left;
+  background: $dark-purple;
+  color: $white;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s; 
+}
+.contact-btn:hover {
+  color: $white;
+  background: $brand-purple;
+  cursor: pointer;
+  box-shadow: $box-shadow-2;
+}
+.contact-btn:focus {
+  background: $gray;
+  color: $white;
+}
+
+input[type='email'] {
+  outline: none;
+  display: block;
+  width: 100%;
+  padding: 1em 1.2em;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  transition: 0.6s;
+}
+input[type='text'] {
+  outline: none;
+  display: block;
+  width: 100%;
+  padding: 1em 1.2em;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+input[type='email']:focus{
+  border: 2px solid $brand-purple;
+  transition: all 0.3s linear;
+}
+input[type='text']:focus{
+  border: 2px solid $brand-purple;
+  transition: all 0.3s linear;
+}
+
+.f-btn {
+  text-transform: uppercase;
+  font-size: 1em;
+  text-align: center;
+  background-color: transparent;
+  border: .2em solid $white;
+  outline: none;
+  padding: 1em 1.5em;
+  margin-top: 1em;
+  width: 7em;
+  color: $white;
+  border-radius: 2em;
+}
+.f-btn:hover {
+  background-color: transparent;
+  border: .2em solid var(--brand-color); 
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  box-shadow: none;
+}
+.f-btn:focus {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  box-shadow: none;
+}
+
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent; }
+  50% {
+    border-color: #cd52ec; } }

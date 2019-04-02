@@ -1,0 +1,152 @@
+@import "../css/index.css";
+@import "variables";
+@import "../css/contact.css";
+@import "../css/preloader.css";
+@import "../css/header.css";
+@import "../css/unique-slide.css";
+@import "../css/testimonial.css";
+@import "../css/fixed-modal.css";
+@import "../css/footer.css";
+@import "../css/preloader.css";
+@import "../css/normalize.css";
+@import "../css/about-us.css";
+@import "../css/constitution.css";
+@import "../css/gallery.css";
+@import "../css/events-and-news.css";
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto Light"), local("Roboto-Light"),
+  url(https://fonts.gstatic.com/roboto.woff2) format('woff2'),
+  url(https://fonts.gstatic.com/roboto.woff) format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url(../font/quicksand/quicksand.ttf)  format('truetype');
+}
+@font-face {
+  font-family: 'Intro';
+  src: url(../font/intro/intro.otf)  format('truetype');
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  overflow-x: hidden;
+  background: $light-gray;
+}
+:root {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*, 
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+.fonts-failed body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+.fonts-failed h1,
+.fonts-failed h2,
+.fonts-failed h3,
+.fonts-failed h4 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  border: 1px solid $gray;
+  border-radius: .8em;
+}
+::-webkit-scrollbar-track {
+  border-radius: 0;
+  background-color: $extra-light-gray;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $font-color;
+  border-radius: .8em;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(28,21,50,0.9);
+}
+
+a{ 
+  text-decoration: none;
+  color: $medium-purple;
+  transition: color 0.3s ease-out;
+
+  &:hover {
+    color: $dark-purple;
+  }
+  &:visited {
+    color: brand-purple;
+  }
+  &:focus {
+    color: $header-hover;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', serif;
+}
+
+
+p {
+  text-align: center;
+  text-justify: inter-word;
+  color: $font-color;
+}
+
+img {
+  border: none;
+  max-width: 100%;
+}
+
+
+/*scroll to top*/
+
+.scrollToTop {
+  background: transparent;
+  color: $medium-purple;
+  bottom: 1.25em;
+  display: inline-block;
+  height: 3.2em;
+  opacity: 1;
+  background-color: rgba(28,21,50,0.2);
+  position: fixed;
+  right: 1.25em;
+  text-align: center;
+  width: 3.125em;
+  z-index: 100;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  
+  &:hover{
+    background-position: 13px -50px;  
+    background-color: rgba(28,21,50,0.9);
+    opacity: 1;
+    color: $white;
+    border: none;
+    text-decoration: none;
+    outline: none;
+    -webkit-box-shadow: $box-shadow-2; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: $box-shadow-2; /* Firefox 3.5 - 3.6 */
+    box-shadow: $box-shadow-2; /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}
+.fa-arrow-up {
+  margin: 30% 0;
+  text-align: center;
+}
+// END OF SCROLL TO TOP

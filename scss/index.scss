@@ -1,0 +1,105 @@
+@import "variables";
+@import "../css/header.css";
+@import "../css/unique-slide.css";
+@import "../css/testimonial.css";
+@import "../css/fixed-modal.css";
+@import "../css/footer.css";
+@import "../css/preloader.css";
+@import "../css/normalize.css";
+
+@mixin deskTopFirst($media) {
+    @media screen and (max-width: $media/16+em) { @content; }
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto Light"), local("Roboto-Light"),
+  url(https://fonts.gstatic.com/roboto.woff2) format('woff2'),
+  url(https://fonts.gstatic.com/roboto.woff) format('woff');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Quicksand';
+  src: url(../font/quicksand/quicksand.ttf)  format('truetype');
+}
+@font-face {
+  font-family: 'Intro';
+  src: url(../font/intro/intro.otf)  format('truetype');
+}
+
+//Welcome page tile row
+.tile-container {
+    margin: 2em auto;
+    max-width: 1080px;
+}
+
+.tile-row {
+    display: flex;
+
+    & > * { /*Makes column with equal widht*/
+        flex: 1;
+    }
+
+    & > * + * {
+        margin-left: 1.5625em;
+        /* Adds 25px between each column */
+    }
+
+    @include deskTopFirst(658) {
+        display: flex;
+        flex-flow: column wrap;
+
+        & > * { /*Makes column with equal widht*/
+            flex: 100%;
+            max-width: 100%;
+        }
+
+        & > * + * {
+            margin-top: 1.5625em;
+            /* Adds 25px between each column */
+        }
+
+        & > * + * {
+            margin-left: 0;
+            /* Adds 25px between each column */
+        }
+    }
+}
+
+
+.tile {
+    background-color: $white;
+    border-radius: .3em;
+    padding: 1.5625em;
+
+    h4 {
+        margin-bottom: 1.5em;
+        color: $dark-purple;
+    }
+
+    p {
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+        text-align: left;
+        color: $font-color;
+    }    
+}
+
+
+.button {
+    display: inline-block;
+    padding: 0.4em 1em;
+    color: $brand-purple;
+    border: 2px solid $dark-purple;
+    border-radius: .2em;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: background-color .3s linear;
+}
+.button:hover {
+    background-color: $dark-purple;
+    color: $white;
+    border: 2px solid $dark-purple;
+}

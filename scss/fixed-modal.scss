@@ -1,0 +1,222 @@
+@import "variables";
+@mixin deskTopFirst($media) {
+    @media screen and (max-width: $media/16+em) { @content; }
+}
+
+.top-banner {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    padding: 1em 0;
+    background-color: $white;
+    max-width: 1080px;
+    margin: 2em auto;
+    
+
+    & p {
+        font-size: 1.2em;
+        color: $font-color;
+    }
+
+    @include deskTopFirst(960) {
+        flex: 100%;
+        max-width: 90%;
+
+        & p {
+            padding: .5em .5em;
+            line-height: 3;
+            font-size: 1.1em;
+        }
+    }
+    @include deskTopFirst(658) {
+        flex: 100%;
+        max-width: 90%;
+        
+        & p {
+            padding: .5em .5em;
+            line-height: 3;
+            font-size: 1em;
+        }
+    }
+}
+
+.top-banner__bold {
+    color: $brand-purple;
+}
+
+.modal {
+    display: none; /*Hides d modal by default; JS will set display:block when it opens the modal*/
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $brand-purple-rgba;
+    z-index: 100; /*Brings the backdrop in front of elements without a z-index*/
+}
+
+.modal-body {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    top: 3em;
+    bottom: 3em;
+    right: 20%;
+    left: 20%;
+    padding: 2em 3em;
+    background-color: $white;
+    overflow: auto; /*Allows d modal body to scroll, if necessary*/
+    z-index: 300; /*Brings d modal-body in front of the backdrop*/
+
+    & h2 {
+        font-weight: 900;
+        font-size: 2em;
+        color: $brand-purple;
+        margin-bottom: 1em;
+    }
+
+    & p {
+        color: $font-color;
+        letter-spacing: 0.1em;
+        font-weight: 400;
+    }
+
+    @include deskTopFirst(960) {
+        flex: 100%;
+        max-width: 100%;
+        height: auto;
+
+        & h2 {
+            font-size: 1.5em;
+        }
+    }
+    @include deskTopFirst(658) {
+        flex: 100%;
+        max-width: 100%;
+        height: auto;
+        left: 10%;
+        right: 10%;
+
+        & h2 {
+            font-size: 1.3em;
+        }
+    }
+}
+
+
+.modal-close {
+    position: absolute;
+    top: 0.3em; /*.3em from the top edge*/
+    right: 0.3em; /*.3em from the right edge*/
+    padding: 0.3em;
+    cursor: pointer;
+    font-size: 2em;
+    height: 1em;
+    width: 1em;
+    text-indent: 10em; /*Forces d text to*/  
+    /*text-indent property pushes d text to d right, outside of the content*/
+    overflow: hidden; /*oveflow the*/
+    outline-color: $brand-purple;
+    background: $white;
+    border: 0; /*element and hides it*/
+
+    &::after {
+        position: absolute;
+        line-height: 0.5;
+        top: 0.2em;
+        left: 0.1em;
+        text-indent: 0; /*inherited property, reset to 0 on pesudo-class so x not indented*/
+        content: "\00D7"; /*Adds d unicode U+00D7 (multiplication sign)*/
+    
+        /*Pseudo class is now absolutely positioned. It behaves like a child element
+        of d button, so the btn being positioned becomes the containing block for its
+        pesudo-element. This short line-height keeps the pesudo-element from being too*/
+    }
+}
+
+
+.text-input {
+    position: relative;
+    margin-top: 50px;
+
+    & input[type="text"] {
+        display: inline-block;
+        width: 500px;
+        height: 40px;
+        box-sizing: border-box;
+        outline: none;
+        border: 1px solid $gray;
+        border-radius: 0.7em;
+        padding: 10px 10px 10px 100px;
+        transition: all 0.1s ease-out;
+    }
+    & input[type="text"]:focus {
+        padding: 10px;
+        transition: all 0.3s ease-out 0.2s;
+        color: $brand-purple;
+        border: 2px solid $brand-purple;
+    }
+
+    @include deskTopFirst(960) {
+        & input[type="text"] {
+            width: 90%;
+            height: 40px;
+            padding: 10px 10px 10px 20px;
+        }
+    }
+    @include deskTopFirst(658) {
+        & input[type="text"] {
+            width: 100%;
+            height: 40px;
+            padding: 10px 10px 10px 8px;
+        }
+    }
+}
+
+.cta-form-btn {
+    padding: 5px 25px;
+    border-radius: .2em;
+    border: 2px solid $dark-purple;
+    background: transparent;
+    color: $dark-purple;
+    text-align: center;
+    height: 40px;
+    font-size: 1.1em;
+    box-sizing: border-box;
+    width: 130px;
+    transition: background-color 0.2s linear, color 0.2s linear;
+
+    &:hover {
+        box-shadow: $box-shadow-2;
+        cursor: pointer;
+        background-color: $brand-purple;
+        border: 2px solid $brand-purple;
+        color: $white;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+
+.cta-form--submit {
+    position: relative;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin-top: .9em;
+
+    &:focus {
+        box-shadow: none;
+        background-color: $gray;
+        border: 2px solid $gray;
+        color: $white;
+    }
+}

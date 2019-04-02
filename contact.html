@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contact Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:700|Roboto:300" rel="stylesheet">
+    
+    <!--BASIC LINKS-->
+    <link rel="stylesheet" type="text/css" href="css/assets/all.min.css">
+    <!-- SCRIPTS -->
+    <script src="js/fontfaceobserver.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/prefixfree.js"></script>
+
+    <!-- SCROLL REVEAL -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script>
+		ScrollReveal({ duration: 1000 })
+    </script>
+</head>
+<body>
+    <!-- PRELOADER -->
+    <div class="loader">
+        <img src="img/loading-gif.gif" alt="Loading...">
+    </div>
+    <!-- SCROLLTOTOP BUTTON-->
+    <a class="scrollToTop" href="#"><i class="fa fa-arrow-up"></i>
+    </a>
+    <!-- END OF SCROLL TO TOP BUTTON-->
+    <!-- BANNER NAVIGATION -->
+    <div class="navTop-banner">
+        <a href="index.html"><img src="img/logo.png" alt="Site logo"></a>
+        <button class="menu-toggle nav-button" role="banner" id="nav-button"></button>
+    </div>
+    <nav>
+        <ul class="menu">
+            <a href="index.html"><li data-text="Home">Home</li></a>
+            <a href="about-us.html"><li data-text="About us">About SHSN</li></a>
+            <a href="constitution.html"><li data-text=" Our constitution">Constitution</li></a>
+            <a href="gallery.html"><li data-text=" Gallery box">Gallery</li></a>
+            <a href="events-and-news.html"><li data-text="News and Events">News and Events</li></a>
+            <a href="contact.html"><li data-text="Contact us">Contact</li></a>
+        </ul>
+    </nav>
+    <!-- END OF PRIMARY NAV -->
+    <!--  START MAIN PAGE  -->
+    <div class="page-container">
+    <!-- HERO MARKUP BEGINS -->
+    <div class="contact-hero">
+        <div class="contact-hero__inner">
+            <h1>contact us</h1>
+        </div>
+    </div>
+        <!-- END OF HERO MARKUP -->
+    
+    <!-- PAGE CONTAINER -->
+    <div class="contact-container">
+        <div class="contact__inner">
+            <h2>Get in touch with us.</h2>
+            <p class="enlarge">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of type and scrambled it to make a type
+                specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of type and scrambled it to make a type
+                specimen book.
+            </p>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of type and scrambled it to make a type
+                specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of type and scrambled it to make a type
+                specimen book.
+            </p>
+        </div>
+
+        <div class="contact-address-container">
+                <div class="contact-row">
+                    <div class="contact-col">
+                        <h4>Where to find us</h4>
+                        <p>Obafemi Awolowo University,</p>
+                        <p>Department of History,</p>
+                        <p>Humanities Block 2,</p>
+                        <p>Ile-Ife, Osun State.</p>
+                    </div>
+                    <div class="contact-col">
+                        <h4>contact info</h4>
+                        <p>Phone: 08000000000</p>
+                        <p>Land line: 08000000000</p>
+                        <a href="#0" class="email">Email SHSN</a>
+                    </div> 
+                </div>
+            </div>
+
+            <div class="contact-forms-container">
+                <form action="#0" method="#0" class="contact-forms__inner">
+                    <div class="forms-container">
+                        <input type="text" name="name" placeholder="First and Last Name" required pattern=".\S.*" />
+
+                        <input type="email" name="email" placeholder="Email Address" required />
+
+                        <input type="text" name="subject" placeholder="subject" required pattern=".\S.*" />
+
+                        <textarea class="forms__textarea" placeholder="What would you like to tell us"></textarea>
+
+                        <a href="#0"><button type="submit" class="contact-btn">Submit</button></a>
+                    </div>
+                </form>
+            </div>
+    </div>
+
+    <!--    GOOGLE MAPS  -->
+        <div class="google-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.506040433402!2d4.521863913617066!3d7.51964941286993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103830dee37ad195%3A0xb4498fe24491bc41!2sHumanities+Block+2%2C+Adesoji+Aderemi+Rd%2C+Ife!5e0!3m2!1sen!2sng!4v1545397236164" width="100%" height="450" scrolling=no marginheight="0" marginwidth="0" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+
+
+    <!--FOOTER markup statrs-->
+
+     <!-- FIXED MODAL BEGINS -->
+     <div class="top-banner">
+            <div class="top-banner__inner">
+                <p>
+                    Get the latest update from <b class="top-banner__bold">SHSN</b> each
+                    month. Sign up for our newsletter:
+                    <button id="open" class="cta-form-btn">Sign up</button><!--Btn to trigger d modal--> 
+                </p>
+            </div>
+        </div>
+    
+        <div class="modal" id="modal"> <!--Container for modal-->
+            <div class="modal-backdrop"></div> <!--A "backdrop" to obscure content behind the modal-->
+            <div class="modal-body"> <!--Modal contents-->
+                <button class="modal-close" id="close">Close</button>
+                <h2>Students' Historical Society of Nigeria</h2>
+                <p>Sign up for our monthly newsletter. No spam. We promise!</p>
+    
+                <div class="text-input">
+                    <input type="text" name="email" id="input1"
+                    placeholder="Your valid email address" required>
+                    <!-- <label for="email"></label> -->
+                    <p><button type="submit" class="cta-form-btn cta-form--submit">Submit</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIXED MODAL ENDS -->
+
+    <footer class="footer-container">
+        <div class="footer__inner">
+            <hgroup>
+                <h5><a href="about-us.html">society</a></h5>
+                <h5><a href="contact.html">contact</a></h5>
+            </hgroup>
+
+            <div>
+                <p>
+                    <a href="#0" class="f-icons"><i class="fab f-icon fa-twitter fa-1x"></i></a>
+                    <a href="#0" class="f-icons"><i class="fab f-icon fa-linkedin fa-1x"></i></a>
+                    <a href="#0" class="f-icons"><i class="fab f-icon fa-instagram fa-1x"></i></a>
+                    <a href="#0" class="f-icons"><i class="fab f-icon fa-facebook-f fa-1x"></i></a>
+                </p>
+            </div>
+
+            <div class="site-author">
+                <p class="author">
+                   <a href="#0">Site by Dabira Tech</a>
+                </p>
+                <p class="copyright">
+                   &copy; 2019 SHSN
+                </p>
+            </div>
+            
+            <div class="legal">
+                <p class="terms">  <a href="">TERMS & CONDITIONS</a> | <a href="">PRIVACY</a> | <a href="">LEGAL NOTICE</a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer markup ends -->
+    </div>
+
+    <script src="js/custom.js"></script>
+    <script>
+        window.addEventListener("load", function () { 
+        const loader = document.querySelector(".loader");
+        loader.className += " hidden"; // class "loader hidden"
+        });
+    </script> 
+
+    <!-- Hamburger menu script -->
+    <script>
+        document.querySelector('#nav-button').addEventListener('click', () => {
+            const isOpen = document.body.classList.contains('open');
+
+            if (isOpen) {
+                document.body.classList.remove('open');
+            } else {
+                document.body.classList.add('open');
+            }
+        });
+    </script>
+
+    <!-- modal script -->
+    <script>
+        var button = document.getElementById('open');
+        var close = document.getElementById('close');
+        var modal = document.getElementById('modal');
+
+        button.addEventListener('click', function (event) {
+        event.preventDefault();
+        modal.style.display = 'block';
+        });
+
+        close.addEventListener('click', function (event) {
+        event.preventDefault();
+        modal.style.display = 'none';
+        });
+    </script>
+
+    <script>
+        ScrollReveal().reveal('.contact-container', { delay : 500 });
+        ScrollReveal().reveal('.contact-hero__inner', { delay : 500 });
+        ScrollReveal().reveal('.contact-address-container', { delay : 500 });
+        ScrollReveal().reveal('.contact-forms-container', { delay : 500 });
+        ScrollReveal().reveal('.google-map', { delay : 500 });
+        ScrollReveal().reveal('.top-banner', { delay : 500 });
+    </script>
+</body>
+</html>

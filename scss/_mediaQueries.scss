@@ -1,0 +1,28 @@
+// 320 480 600 768 1024
+@mixin mobileFirst($media) {
+    @media screen and (min-width: $media/16+em) { @content; }
+}
+
+@include mobileFirst(320) {
+
+}
+@include mobileFirst(480) {
+    
+}
+@include mobileFirst(768) {
+    
+}
+@include mobileFirst(1024) {
+    
+}
+
+@mixin deskTopFirst($media) {
+    @media screen and (max-width: $media/16+em) { @content; }
+}
+
+@include deskTopFirst(960) {
+
+}
+@include deskTopFirst(685) {
+
+}

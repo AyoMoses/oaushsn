@@ -1,0 +1,240 @@
+.hero {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background: url(../img/about-us_m.jpg) no-repeat;
+  object-fit: cover;
+  background-clip: border-box;
+  max-width: 100%;
+  height: 70vh; }
+  @media screen and (min-width: 20em) {
+    .hero {
+      flex: 100%;
+      max-width: 100%;
+      background: url(../img/about-us_s.jpg) no-repeat;
+      padding: 5em 5em;
+      object-fit: cover;
+      background-size: cover;
+      overflow: hidden; } }
+  @media screen and (min-width: 30em) {
+    .hero {
+      flex: 100%;
+      max-width: 100%;
+      background: url(../img/about-us_s.jpg) no-repeat;
+      padding: 5em 5em;
+      object-fit: cover;
+      background-size: cover;
+      overflow: hidden; } }
+  @media screen and (min-width: 48em) {
+    .hero {
+      background: url(../img/about-us_s.jpg) no-repeat;
+      flex: 100%;
+      max-width: 100%;
+      padding: 5em 5em;
+      object-fit: cover;
+      background-size: cover;
+      overflow: hidden; } }
+  @media screen and (min-width: 64em) {
+    .hero {
+      background: url(../img/about-us_m.jpg) no-repeat;
+      flex: 100%;
+      max-width: 100%;
+      padding: 15em 0;
+      object-fit: cover;
+      background-size: cover;
+      overflow: hidden; } }
+  .hero .hero__inner h1 {
+    text-align: center;
+    color: #ffffff; }
+
+.about-main {
+  box-sizing: border-box;
+  max-width: 95%;
+  margin: 2em auto; }
+  .about-main .faint-text {
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #868e96;
+    white-space: normal;
+    word-spacing: -0.02em; }
+  .about-main h2 {
+    text-align: left;
+    color: #cd52ec;
+    font-size: 2em;
+    padding: .4em .9em;
+    text-transform: capitalize; }
+  .about-main p {
+    margin: .5em 0;
+    padding: 1em 1em;
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+    font-size: 1.3em;
+    text-align: justify;
+    white-space: normal;
+    word-spacing: -0.04em; }
+  @media screen and (min-width: 20em) {
+    .about-main .faint-text {
+      font-size: 1.1em;
+      white-space: normal;
+      word-spacing: -0.02em; }
+    .about-main h2 {
+      font-size: 1.4em; }
+    .about-main p {
+      font-size: 1em;
+      white-space: normal;
+      word-spacing: -0.02em; } }
+  @media screen and (min-width: 30em) {
+    .about-main .faint-text {
+      font-size: 1.1em;
+      white-space: normal;
+      word-spacing: -0.04em; }
+    .about-main h2 {
+      font-size: 1.4em; }
+    .about-main p {
+      font-size: 1em;
+      white-space: normal;
+      word-spacing: -0.02em; } }
+  @media screen and (min-width: 48em) {
+    .about-main .faint-text {
+      font-size: 1.3em;
+      white-space: normal;
+      word-spacing: -0.02em; }
+    .about-main h2 {
+      font-size: 1.4em; }
+    .about-main p {
+      font-size: 1.1em;
+      white-space: normal;
+      word-spacing: -0.02em; } }
+  @media screen and (min-width: 64em) {
+    .about-main .faint-text {
+      font-size: 1.5em;
+      white-space: normal;
+      word-spacing: -0.04em; }
+    .about-main h2 {
+      font-size: 2em; }
+    .about-main p {
+      font-size: 1.3em;
+      white-space: normal;
+      word-spacing: -0.02em; } }
+
+.secImg-container {
+  max-width: 95%;
+  margin: 0 auto;
+  overflow-x: hidden;
+  border-radius: 1em;
+  box-shadow: 10px 10px 15px 0 rgba(134, 142, 150, 0.5); }
+
+.secImg__inner {
+  background: url(../img/gallery/13-m.jpg) no-repeat;
+  max-width: 100%;
+  background-clip: border-box;
+  overflow: hidden;
+  height: 500px;
+  padding: 1em 3em;
+  border-radius: 1em; }
+  .secImg__inner h2 {
+    color: #1c1532;
+    white-space: wrap;
+    letter-spacing: -0.04em;
+    text-align: center;
+    text-transform: uppercase;
+    font: message-box 2.5em inherit;
+    text-shadow: 0.03em 0.03em #868e96; }
+  @media screen and (min-width: 20em) {
+    .secImg__inner {
+      background-image: url(../img/gallery/13-s.jpg) no-repeat;
+      max-width: 100%; } }
+  @media screen and (min-width: 30em) {
+    .secImg__inner {
+      background-image: url(../img/gallery/13-s.jpg) no-repeat;
+      max-width: 100%; } }
+  @media screen and (min-width: 48em) {
+    .secImg__inner {
+      background-image: url(../img/gallery/13-s.jpg) no-repeat;
+      max-width: 100%; } }
+  @media screen and (min-width: 64em) {
+    .secImg__inner {
+      background-image: url(../img/gallery/13-s.jpg) no-repeat;
+      max-width: 100%; } }
+
+.secImg__inner-2 {
+  background: url(../img/gallery/7-m.jpg) no-repeat; }
+  @media screen and (min-width: 20em) {
+    .secImg__inner-2 {
+      background: url(../img/gallery/7-m.jpg) no-repeat;
+      object-fit: cover; } }
+  @media screen and (min-width: 30em) {
+    .secImg__inner-2 {
+      background: url(../img/gallery/7-m.jpg) no-repeat;
+      object-fit: cover; } }
+  @media screen and (min-width: 48em) {
+    .secImg__inner-2 {
+      background: url(../img/gallery/7-m.jpg) no-repeat; } }
+  @media screen and (min-width: 64em) {
+    .secImg__inner-2 {
+      background: url(../img/gallery/7-m.jpg) no-repeat; } }
+
+.sub-img__header {
+  text-align: center;
+  font-size: 1.5em; }
+
+h2 {
+  color: #cd52ec;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: .5em; }
+  @media screen and (min-width: 20em) {
+    h2 h2 {
+      font-size: 1.3em; } }
+  @media screen and (min-width: 30em) {
+    h2 h2 {
+      font-size: 1.5em; } }
+  @media screen and (min-width: 48em) {
+    h2 h2 {
+      font-size: 1.7em; } }
+  @media screen and (min-width: 64em) {
+    h2 h2 {
+      font-size: 2.5em; } }
+
+.card-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  text-align: center;
+  margin: 2em 0; }
+
+.card-container-2 h2 {
+  color: #512245; }
+
+.card-2:hover {
+  box-shadow: none !important; }
+
+.card {
+  padding: 0.5em;
+  background-color: #ffffff;
+  border-radius: 0.3em;
+  max-width: 300px;
+  height: 480px;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-bottom: 0.6em;
+  color: #bc23e3;
+  transition: all 0.2s linear;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+  .card img {
+    max-width: 100%;
+    height: 300px;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 10em;
+    padding: .3em .3em; }
+
+.card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  background: #ccc;
+  color: #cd52ec; }
+  .card:hover img {
+    background: #ffffff; }
+
+/*# sourceMappingURL=about-us.css.map */

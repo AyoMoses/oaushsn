@@ -1,0 +1,20 @@
+.gallery {
+  max-width: 1080px;
+  margin: 0 auto; }
+  .gallery img {
+    width: 250px;
+    padding: 5px 5px;
+    max-width: 100%;
+    filter: grayscale(100%);
+    transition: all 0.2s linear;
+    cursor: pointer; }
+  .gallery img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1); }
+  @media screen and (max-width: 60em) {
+    .gallery img {
+      margin: 0 18%;
+      max-width: 100%;
+      filter: grayscale(0); } }
+
+/*# sourceMappingURL=gallery.css.map */

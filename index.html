@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SHSN Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="css/assets/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:700|Roboto:300" rel="stylesheet">
+    <link rel="stylesheet" href="css/assets/all.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+    
+    <!--SCRIPTS-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/fontfaceobserver.js"></script>
+    <script src="js/prefixfree.js"></script>
+
+    <script>
+		ScrollReveal({ duration: 1000 })
+    </script>
+
+    
+</head>
+<body>
+    <!-- PRELOADER -->
+    <div class="loader">
+        <img src="img/loading-gif.gif" alt="Loading...">
+    </div>
+
+    <!-- SCROLLTOTOP BUTTON-->
+    <a class="scrollToTop" href="#"><i class="fa fa-arrow-up"></i></a>
+    <!-- END OF SCROLL TO TOP BUTTON-->
+
+    <!-- BANNER NAVIGATION -->
+    <div class="navTop-banner">
+        <a href="index.html"><img src="img/logo.png" alt="Site logo"></a>
+        <button class="menu-toggle nav-button" role="banner" id="nav-button"></button>
+    </div>
+    <nav>
+        <ul class="menu">
+            <a href="index.html"><li data-text="Home">Home</li></a>
+            <a href="about-us.html"><li data-text="About us">About SHSN</li></a>
+            <a href="constitution.html"><li data-text=" Our constitution">Constitution</li></a>
+            <a href="gallery.html"><li data-text=" Gallery box">Gallery</li></a>
+            <a href="events-and-news.html"><li data-text="News and Events">News and Events</li></a>
+            <a href="contact.html"><li data-text="Contact us">Contact</li></a>
+        </ul>
+    </nav>
+    <!-- END OF PRIMARY NAV -->
+
+    <div class="page-container">
+
+    <!-- HOMEPAGE SLIDER -->
+
+    <div class="homeSlide-container">
+	
+
+        <input type="radio" id="i1" name="images" checked/>
+        <input type="radio" id="i2" name="images" />
+        <input type="radio" id="i3" name="images" />
+        <input type="radio" id="i4" name="images"  />
+                
+        <div class="slide_img" id="one">			
+                        
+            <img src="img/slider/3.jpg">
+                        
+            <label class="prev" for="i4"><span></span></label>
+            <label class="next" for="i2"><span></span></label>	
+                    
+        </div>
+                
+        <div class="slide_img" id="two">
+                    
+            <img src="img/slider/4.jpg">
+                        
+            <label class="prev" for="i1"><span></span></label>
+            <label class="next" for="i3"><span></span></label>
+                    
+        </div>
+                        
+        <div class="slide_img" id="three">
+            <img src="img/slider/5-m.jpg">	
+                        
+            <label class="prev" for="i2"><span></span></label>
+            <label class="next" for="i4"><span></span></label>
+        </div>
+            
+            
+        <div class="slide_img" id="four">
+            <img src="img/slider/5.jpg">	
+                        
+            <label class="prev" for="i3"><span></span></label>
+            <label class="next" for="i1"><span></span></label>
+            
+        </div>
+            
+        <div id="nav_slide">
+            <label for="i1" class="dots" id="dot1"></label>
+            <label for="i2" class="dots" id="dot2"></label>
+            <label for="i3" class="dots" id="dot3"></label>
+            <label for="i4" class="dots" id="dot4"></label>
+        </div>
+                    
+    </div>
+
+    
+    <div class="tile-container">
+        <div class="tile-row">
+            <div class="tile">
+                <h4>We are SHSN</h4>
+                <p>
+                    Eu percolator saucer so mug coffee crema aromatic. Body skinny,
+                    cream coffee et milk espresso. In flavour body caffeine spoon a
+                    organic. Galão, et at in plunger pot grinder blue mountain.
+                </p>
+                <a href="about-us.html" class="button">Read more</a>
+            </div>
+
+            <div class="tile">
+                <h4>Explore our gallery</h4>
+                <p>
+                    Eu percolator saucer so mug coffee crema aromatic. Body skinny,
+                    cream coffee et milk espresso. In flavour body caffeine spoon a
+                    organic. Galão, et at in plunger pot grinder blue mountain.
+                </p>
+                <a href="gallery.html" class="button">Read more</a>
+            </div>
+
+            <div class="tile">
+                <h4>Upcoming events</h4>
+                <p>
+                    Eu percolator saucer so mug coffee crema aromatic. Body skinny,
+                    cream coffee et milk espresso. In flavour body caffeine spoon a
+                    organic. Galão, et at in plunger pot grinder blue mountain.
+                </p>
+                <a href="events-and-news.html" class="button">Read more</a>
+            </div>
+        </div>
+    </div>
+
+    <!--TESTIMONIAL FLEX-->
+    <div class="testimonials">
+        <div class="testimonials__inner">
+            <h1>Alumni Testimonials</h1>
+            <div class="border"></div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="testimonial">
+                        <img src="img/testimonial-1.jpg" alt="">
+                        <div class="name">Jane Doe</div>
+                        <div class="testimonial__year">Class of 15'</div>
+                        <div class="stars">
+                            <i class="fa fa-grin"></i>
+                            <i class="fa fa-grin"></i>
+                            <i class="fa fa-grin"></i>
+                            <i class="fa fa-sad-tear"></i>
+                        </div>
+
+                        <p>
+                            Cappuccino body, strong acerbic,
+                            sit instant, to go single shot affogato iced cortado siphon.
+                            Café au lait medium iced robusta instant extraction aroma
+                            strong medium.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="testimonial">
+                        <img src="img/testimonial-4.jpg" alt="">
+                        <div class="name">Jane Doe</div>
+                        <div class="testimonial__year">Class of 15'</div>
+                        <div class="stars">
+                            <i class="fa fa-grin"></i>
+                            <i class="fa fa-grin"></i>
+                            <i class="fa fa-grin"></i>
+                            <i class="fa fa-grin"></i>
+                        </div>
+
+                        <p>
+                            Cappuccino body, strong acerbic,
+                            sit instant, to go single shot affogato iced cortado siphon.
+                            Café au lait medium iced robusta instant extraction aroma
+                            strong medium.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="testimonial">
+                        <img src="img/testimonial-3.jpg" alt="">
+                        <div class="name">Jane Doe</div>
+                        <div class="testimonial__year">Class of 15'</div>
+                        <div class="stars">
+                            <i class="fa fa-grin"></i>
+                            <i class="fa fa-grin"></i>
+                            <i class="fa fa-grin"></i>
+                            <i class="fa fa-grin"></i>
+                        </div>
+
+                        <p>
+                            Cappuccino body, strong acerbic,
+                            sit instant, to go single shot affogato iced cortado siphon.
+                            Café au lait medium iced robusta instant extraction aroma
+                            strong medium.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="testimonial">
+                        <img src="img/testimonial-2.jpg" alt="">
+                        <div class="name">Jane Doe</div>
+                        <div class="testimonial__year">Class of 15'</div>
+                        <div class="stars">
+                            <i class="fa fa-grin"></i>
+                            <i class="fa fa-grin"></i>
+                            <i class="fa fa-grin"></i>
+                            <i class="fa fa-grin"></i>
+                        </div>
+
+                        <p>
+                            Cappuccino body, strong acerbic,
+                            sit instant, to go single shot affogato iced cortado siphon.
+                            Café au lait medium iced robusta instant extraction aroma
+                            strong medium.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FIXED MODAL BEGINS -->
+    <div class="top-banner">
+        <div class="top-banner__inner">
+            <p>
+                Get the latest update from <b class="top-banner__bold">SHSN</b> each
+                month. Sign up for our newsletter:
+                <button id="open" class="cta-form-btn">Sign up</button><!--Btn to trigger d modal--> 
+            </p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal"> <!--Container for modal-->
+        <div class="modal-backdrop"></div> <!--A "backdrop" to obscure content behind the modal-->
+        <div class="modal-body"> <!--Modal contents-->
+            <button class="modal-close" id="close">Close</button>
+            <h2>Students' Historical Society of Nigeria</h2>
+            <p>Sign up for our monthly newsletter. No spam. We promise!</p>
+
+            <div class="text-input">
+                <input type="text" name="email" id="input1"
+                placeholder="Your valid email address" required>
+                <!-- <label for="email"></label> -->
+                <p><button type="submit" class="cta-form-btn cta-form--submit">Submit</button></p>
+            </div>
+        </div>
+    </div>
+    <!-- FIXED MODAL ENDS -->
+
+    <!--FOOTER markup starts-->
+
+    <footer class="footer-container">
+        <div class="footer__inner">
+            <hgroup>
+                <h5><a href="about-us.html">society</a></h5>
+                <h5><a href="contact.html">contact</a></h5>
+            </hgroup>
+
+            <div>
+                <p>
+                    <a href="#0" class="f-icons"><i class="fab f-icon fa-twitter fa-1x"></i></a>
+                    <a href="#0" class="f-icons"><i class="fab f-icon fa-linkedin fa-1x"></i></a>
+                    <a href="#0" class="f-icons"><i class="fab f-icon fa-instagram fa-1x"></i></a>
+                    <a href="#0" class="f-icons"><i class="fab f-icon fa-facebook-f fa-1x"></i></a>
+                </p>
+            </div>
+
+            <div class="site-author">
+                <p class="author">
+                   <a href="#0">Site by Dabira Tech</a>
+                </p>
+                <p class="copyright">
+                   &copy; 2019 SHSN
+                </p>
+            </div>
+            
+            <div>
+                <p class="terms">  <a href="">TERMS & CONDITIONS</a> | <a href="">PRIVACY</a> | <a href="">LEGAL NOTICE</a></p>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    <script src="js/custom.js"></script>
+    <!-- Preloader script -->
+    <script>
+        window.addEventListener("load", function () { 
+        const loader = document.querySelector(".loader");
+        loader.className += " hidden"; // class "loader hidden"
+        });
+    </script> 
+
+    <!-- Hamburger menu script -->
+    <script>
+        document.querySelector('#nav-button').addEventListener('click', () => {
+            const isOpen = document.body.classList.contains('open');
+
+            if (isOpen) {
+                document.body.classList.remove('open');
+            } else {
+                document.body.classList.add('open');
+            }
+        });
+    </script>
+
+    <!-- slider script -->
+    <script>
+        onload  = start;
+
+        function start(){	
+        var i = 1;
+        function Move(){ 	
+            i = (i%4)+1; // 4 is the Number of image in slider
+            document.getElementById('i'+i).checked = true;
+        }
+        setInterval(Move,5000); //change img in 3 sec
+        }
+    </script>
+
+    <!-- modal script -->
+    <script>
+        var button = document.getElementById('open');
+        var close = document.getElementById('close');
+        var modal = document.getElementById('modal');
+
+        button.addEventListener('click', function (event) {
+        event.preventDefault();
+        modal.style.display = 'block';
+        });
+
+        close.addEventListener('click', function (event) {
+        event.preventDefault();
+        modal.style.display = 'none';
+        });
+    </script>
+
+    <script>
+        ScrollReveal().reveal('.tile-container', { delay : 500 });
+        ScrollReveal().reveal('.testimonials', { delay : 500 });
+        ScrollReveal().reveal('.top-banner', { delay : 500 });
+        ScrollReveal().reveal('.footer-container', { delay : 500 });
+    </script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+@import url(../css/main.css);
+
+.top-banner {
+    padding: 1em 0;
+    background-color: var(--white);
+    margin: 3em 0;
+}
+.top-banner p {
+    font-size: 1.3em;
+}
+
+.top-banner-inner {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.top-banner__bold {
+    color: var(--brand-purple);
+}
+
+.modal {
+    display: none; /*Hides d modal by default; JS will set display:block when it opens the modal*/
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--brand-purple-rgba);
+    z-index: 1; /*Brings the backdrop in front of elements without a z-index*/
+}
+
+.modal-body {
+    position: fixed;
+    top: 3em;
+    bottom: 3em;
+    right: 20%;
+    left: 20%;
+    padding: 2em 3em;
+    background-color: var(--white);
+    overflow: auto; /*Allows d modal body to scroll, if necessary*/
+    z-index: 2; /*Brings d modal-body in front of the backdrop*/
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.modal-body h2 {
+    font-weight: 900;
+    font-size: 2em;
+    color: var(--brand-purple);
+    margin-bottom: 1em;
+}
+.modal-body p {
+    color: var(--font-color);
+    letter-spacing: 0.1em;
+    font-weight: 400;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0.3em; /*.3em from the top edge*/
+    right: 0.3em; /*.3em from the right edge*/
+    padding: 0.3em;
+    cursor: pointer;
+    font-size: 2em;
+    height: 1em;
+    width: 1em;
+    text-indent: 10em; /*Forces d text to*/  
+    /*text-indent property pushes d text to d right, outside of the content*/
+    overflow: hidden; /*oveflow the*/
+    outline-color: var(--brand-purple);
+    background: var(--white);
+    border: 0; /*element and hides it*/
+}
+.modal-close::after {
+    position: absolute;
+    line-height: 0.5;
+    top: 0.2em;
+    left: 0.1em;
+    text-indent: 0; /*inherited property, reset to 0 on pesudo-class so x not indented*/
+    content: "\00D7"; /*Adds d unicode U+00D7 (multiplication sign)*/
+
+    /*Pseudo class is now absolutely positioned. It behaves like a child element
+    of d button, so the btn being positioned becomes the containing block for its
+    pesudo-element. This short line-height keeps the pesudo-element from being too*/
+}
+
+.text-input {
+    position: relative;
+    margin-top: 50px;
+}
+
+.text-input input[type="text"] {
+    display: inline-block;
+    width: 500px;
+    height: 40px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid var(--gray);
+    border-radius: 0.7em;
+    padding: 10px 10px 10px 100px;
+    transition: all 0.1s ease-out;
+}
+
+.text-input input[type="text"] + label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    color: var(--white);
+    border-radius: 3px 0 0 3px;
+    padding: 0 20px;
+    background: var(--dark-purple);
+    transform: translateZ(0) translateX(0);
+    transition: all 0.3s ease-in 0.2s;
+}
+
+.text-input input[type="text"]:focus + label {
+    transform: translateY(-120%) translateX(0%);
+    border-radius: 3px;
+    background-color: var(--gray);
+    transition: all 0.1s ease-out;
+}
+
+.text-input input[type="text"]:focus {
+    padding: 10px;
+    transition: all 0.3s ease-out 0.2s;
+    color: var(--brand-purple);
+    border: 2px solid var(--brand-purple);
+}
+
+.cta-form-btn {
+    padding: 5px 25px;
+    color: var(--white);
+    background-color: var(--dark-purple);
+    border: none;
+    text-align: center;
+    height: 40px;
+    font-size: 1.1em;
+    box-sizing: border-box;
+    width: 130px;
+    transition: box-shadow 0.2s linear;
+}
+.cta-form-btn:hover {
+    box-shadow: var(--box-shadow-2);
+    cursor: pointer;
+    background-color: var(--brand-purple);
+}
+.cta-form-btn:focus {
+    outline: none;
+}
+
+.cta-form--submit {
+    position: relative;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin-top: .9em;
+}
+.cta-form--submit:focus {
+    box-shadow: none;
+    background-color: var(--gray);
+}

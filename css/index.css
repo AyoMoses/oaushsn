@@ -1,0 +1,75 @@
+@import url(../css/header.css);
+@import url(../css/unique-slide.css);
+@import url(../css/testimonial.css);
+@import url(../css/fixed-modal.css);
+@import url(../css/footer.css);
+@import url(../css/preloader.css);
+@import url(../css/normalize.css);
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto Light"), local("Roboto-Light"), url(https://fonts.gstatic.com/roboto.woff2) format("woff2"), url(https://fonts.gstatic.com/roboto.woff) format("woff");
+  font-display: swap; }
+@font-face {
+  font-family: 'Quicksand';
+  src: url(../font/quicksand/quicksand.ttf) format("truetype"); }
+@font-face {
+  font-family: 'Intro';
+  src: url(../font/intro/intro.otf) format("truetype"); }
+.tile-container {
+  margin: 2em auto;
+  max-width: 1080px; }
+
+.tile-row {
+  display: flex; }
+  .tile-row > * {
+    /*Makes column with equal widht*/
+    flex: 1; }
+  .tile-row > * + * {
+    margin-left: 1.5625em;
+    /* Adds 25px between each column */ }
+  @media screen and (max-width: 41.125em) {
+    .tile-row {
+      display: flex;
+      flex-flow: column wrap; }
+      .tile-row > * {
+        /*Makes column with equal widht*/
+        flex: 100%;
+        max-width: 100%; }
+      .tile-row > * + * {
+        margin-top: 1.5625em;
+        /* Adds 25px between each column */ }
+      .tile-row > * + * {
+        margin-left: 0;
+        /* Adds 25px between each column */ } }
+
+.tile {
+  background-color: #ffffff;
+  border-radius: .3em;
+  padding: 1.5625em; }
+  .tile h4 {
+    margin-bottom: 1.5em;
+    color: #9912bb; }
+  .tile p {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    text-align: left;
+    color: #1c1532; }
+
+.button {
+  display: inline-block;
+  padding: 0.4em 1em;
+  color: #bc23e3;
+  border: 2px solid #9912bb;
+  border-radius: .2em;
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: background-color .3s linear; }
+
+.button:hover {
+  background-color: #9912bb;
+  color: #ffffff;
+  border: 2px solid #9912bb; }
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,346 @@
+@import "variables";
+
+@mixin transition-e-o {
+    transition: all .3s ease-out;
+}
+@mixin transition-linear {
+    transition: all .3s linear;
+}
+
+// 320 480 600 768 1024  MOBILE-FIRST MEDIA
+@mixin mobileFirst($media) {
+    @media screen and (min-width: $media/16+em) { @content; }
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.page {
+    max-width: 1200px;
+    display: flex;
+    flex-flow: column wrap;
+    overflow: hidden;
+    justify-content: center;
+    text-align: center;
+
+    @include mobileFirst(320) {
+        flex: 100%;
+        max-width: 100%;
+    }
+    @include mobileFirst(480) {
+        flex: 100%;
+        max-width: 100%;
+    }
+    @include mobileFirst(768) {
+        flex: 100%;
+        max-width: 100%;
+    }
+    @include mobileFirst(1024) {
+        display: flex;
+        flex-flow: column wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+.constitution-hero__typewriter {
+    color: $unique-black;
+    font-family: $font-header;
+    font-size: 1.8em;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px $gray;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid $medium-purple; /* The typwriter cursor */
+    white-space: wrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: -0.04em; /* Adjust as needed */
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+
+    @include mobileFirst(320) {
+        font-size: 1.1em;
+    }
+    @include mobileFirst(480) {
+       font-size: 1.2em;
+    }
+    @include mobileFirst(768) {
+        font-size: 1.5em;
+    }
+    @include mobileFirst(1024) {
+        font-size: 1.7em;
+    }
+}
+
+.constitution-hero {
+    background: url(../img/constitution-m.jpg) no-repeat;
+    background-size: cover;
+    margin-bottom: 2em;
+    display: flex; 
+    
+    &:hover {
+        filter: grayscale(0%);
+        transition: all 0.3s linear;
+    }
+    .constitution-hero__inner {
+        padding: 9em 1em;
+        flex: 3 1 100%;
+    }
+    @include mobileFirst(320) {
+       background: url(../img/constitution-s.jpg) no-repeat;
+       background-size: cover;
+
+       &.constitution-hero__inner {
+        flex: 3 1 100%;
+        padding: 5em 1em;
+        max-width: 100%;
+       }
+    }
+    @include mobileFirst(480) {
+       font-size: 1.2em;
+       background: url(../img/constitution-s.jpg) no-repeat;
+       background-size: cover;
+
+       &.constitution-hero__inner {
+        flex: 3 1 100%;
+        padding: 5em 1em;
+        padding: 5em 1em;
+        max-width: 100%;
+       }
+    }
+    @include mobileFirst(768) {
+        font-size: 1.3em;
+        background: url(../img/constitution-m.jpg) no-repeat;
+        background-size: cover;
+        filter: grayscale(0%);
+
+        &.constitution-hero__inner {
+            flex: 3 1 100%;
+            padding: 5em 1em;
+            max-width: 100%;
+        }
+    }
+    @include mobileFirst(1024) {
+        font-size: 1.5em;
+        background: url(../img/constitution-m.jpg) no-repeat;
+        background-size: cover;
+
+        &.constitution-hero__inner {
+            flex: 3 1 100%;
+            padding: 5em 1em;
+            max-width: 100%;
+        }
+    }
+}
+
+// TOC STYLES
+.TOC {
+    background: $white;
+    width: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    border-radius: 0.5em;
+    box-shadow: $box-shadow;
+    padding: 1em .5em;
+    &:hover {
+        box-shadow: $box-shadow-2;
+        @include transition-linear;
+    }
+    h2 {
+        text-transform: uppercase;
+        font-size: 2em;
+        color: $brand-purple;
+        padding: 1em 1em;
+    }
+    ol {
+        padding: .6em 2em;
+        font-weight: bold;
+        font-size: 1.2em;
+        line-height: 1.4;
+
+        a:focus {
+            color: $gray;
+        }
+        li {
+            color: $accent-color;
+            @include transition-linear;
+            padding: .3em 1em;
+        }
+        li:hover {
+            color: $dark-purple;
+        }
+    }
+    @include mobileFirst(320) {
+        padding: .6em 1em;
+        flex: 3 2 100%;
+
+        h2 {
+            font-size: 1.3em;
+        }
+        ol {
+            font-size: 1em;
+        }
+    }
+    @include mobileFirst(480) {
+        padding: .8em 1em;
+        flex: 3 2 100%;
+
+        h2 {
+            font-size: 1.3em;
+        }
+        ol {
+            font-size: 1em;
+        }
+    }
+    @include mobileFirst(768) {
+        padding: 1em 1.5em;
+        flex: 3 2 100%;
+
+        h2 {
+            font-size: 1.3em;
+        }
+        ol {
+            font-size: 1em;
+        }
+    }
+    @include mobileFirst(1024) {
+        padding: .6em 2em;
+        flex: 3 1 100%;
+
+        h2 {
+            font-size: 1.3em;
+        }
+        ol {
+            font-size: 1em;
+        }
+    }
+}
+
+// ACCORDION STYLES
+.page__main {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 2em 0;
+    box-shadow: $box-shadow;
+    @include transition-linear;
+
+    &:hover {
+        box-shadow: $box-shadow-2;
+    }
+    @include mobileFirst(320) {
+        flex: 100%;
+    }
+    @include mobileFirst(480) {
+        flex: 100%;
+    }
+    @include mobileFirst(768) {
+        flex: 100%;
+    }
+    @include mobileFirst(1024) {
+        flex: 100%;
+    }
+}
+
+.accordion {
+  background-color: $white;
+  color: $font-color;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 18px;
+  max-width: 100%;
+  border: none;
+  text-align: left;
+  text-transform: uppercase;
+  outline: none;
+  font-size: 1em;
+  @include transition-linear;
+
+  &:hover {
+      box-shadow: $box-shadow-2;
+      color: $white;
+  }
+}
+.active, .accordion:hover {
+  background-color: $gray;
+}
+.active {
+    color: $white!important;
+    background: $unique-black!important;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: $font-color;
+  font-weight: bold;
+  float: right;
+  margin-left: .5em;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+    padding: 0 1.125em;
+    background-color: $white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    width: 96.99%;
+    flex: 3 1 0;
+
+    & p {
+        color: $font-color;
+        text-align: left;
+        padding: .8em .3em;
+        font-size: 1.2em;
+        line-height: 1.5;
+        letter-spacing: 0.03;
+    }
+    & h4, h5 {
+        font-size: 1.4em;
+        margin-top: 1em;
+        margin-bottom: 0;
+    }
+    & ol {
+        padding: .5em 1.2em;
+    }
+    & ol > li {
+        list-style: decimal;
+        font-size: 1.2em;
+        padding: .5em .5em;
+    }
+    & ul {
+        padding: .5em 1.2em;
+    }
+    & ul > li {
+        font-size: 1.2em;
+        padding: .5em .5em;
+        list-style-type: lower-alpha;
+    }
+
+    @include mobileFirst(320) {
+        flex: 3 1 100%;
+    }
+    @include mobileFirst(480) {
+        flex: 3 1 100%;
+    }
+    @include mobileFirst(768) {
+        flex: 3 1 100%;
+    }
+    @include mobileFirst(1024) {
+        flex: 3 1 100%;
+    }
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: $medium-purple }
+}
