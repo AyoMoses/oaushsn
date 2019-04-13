@@ -81,6 +81,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Merriweather', serif; }
 
 p {
+  font-family: 'Roboto' sans-serif;
   text-align: center;
   text-justify: inter-word;
   color: #1c1532; }
