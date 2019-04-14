@@ -2,7 +2,6 @@
 @import url(../css/contact.css);
 @import url(../css/preloader.css);
 @import url(../css/header.css);
-@import url(../css/unique-slide.css);
 @import url(../css/testimonial.css);
 @import url(../css/fixed-modal.css);
 @import url(../css/footer.css);
@@ -12,6 +11,7 @@
 @import url(../css/constitution.css);
 @import url(../css/gallery.css);
 @import url(../css/events-and-news.css);
+@import url(../css/sequence-theme.pop-slide.css);
 @font-face {
   font-family: "Roboto";
   font-style: normal;

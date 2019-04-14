@@ -1,25 +1,7 @@
-@charset "UTF-8";
-/**
- * Theme Name: Pop Slide
- * Version: 1.0.0
- * Theme URL: http://sequencejs.com/themes/pop-slide/
- *
- * A colorful sliding theme for feature images, with highlighted pagination
- * and drop-in titles.
- *
- * This theme is powered by Sequence.js - The
- * responsive CSS animation framework for creating unique sliders,
- * presentations, banners, and other step-based applications.
- *
- * Author: Ian Lunn
- * Author URL: http://ianlunn.co.uk/
- *
- * Theme License: http://sequencejs.com/licenses/#free-theme
- * Sequence.js Licenses: http://sequencejs.com/licenses/
- *
- * Copyright ┬⌐ 2015 Ian Lunn Design Limited unless otherwise stated.
- */
-@import url(http://fonts.googleapis.com/css?family=Ubuntu:700|Dosis:600,700);
+.seq {
+  width: 100% !important;
+  max-width: 100% !important; }
+
 .seq {
   position: relative;
   /* Dimensions */
@@ -31,7 +13,7 @@
   /* Center the Sequence container on the page */
   margin: 0 auto;
   padding: 0;
-  font-family: sans-serif; }
+  font-family: #1c1532; }
   .seq.seq-active .seq-preloader {
     background: #1c1532; }
   .seq .seq-preload-circle {
@@ -101,6 +83,7 @@
       height: 100%;
       white-space: normal;
       font-size: 16px;
+      object-fit: cover;
       background-size: cover;
       background-position: 50% 50%;
       -webkit-transform: translateZ(0);
@@ -109,25 +92,25 @@
       -o-transform: translateZ(0);
       transform: translateZ(0); }
   .seq .seq-step1 {
-    background-image: url("../images/roman_empire_colosseum.jpg"); }
+    background-image: url("../img/slider/roman_empire_colosseum.jpg"); }
   .seq .seq-step2 {
-    background-image: url("../images/trans.jpg"); }
+    background-image: url("../img/slider/trans.jpg"); }
   .seq .seq-step3 {
-    background-image: url("../images/Slaveship_v1.jpg"); }
+    background-image: url("../img/slider/Slaveship_v1.jpg"); }
   .seq .seq-step4 {
-    background-image: url("../images/indus-valley.jpg"); }
+    background-image: url("../img/slider/indus-valley.jpg"); }
   .seq .seq-step5 {
-    background-image: url("../images/ww1.jpg"); }
+    background-image: url("../img/slider/ww1.jpg"); }
   .seq .seq-step6 {
-    background-image: url("../images/ww2.jpg"); }
+    background-image: url("../img/slider/ww2.jpg"); }
   .seq .seq-step7 {
-    background-image: url("../images/obama.jpg"); }
+    background-image: url("../img/slider/obama.jpg"); }
   .seq .seq-step8 {
-    background-image: url("../images/apartheid-sa.png"); }
+    background-image: url("../img/slider/apartheid-sa.png"); }
   .seq .seq-step9 {
-    background-image: url("../images/great-trek.jpg"); }
+    background-image: url("../img/slider/great-trek.jpg"); }
   .seq .seq-step10 {
-    background-image: url("../images/madela.jpg"); }
+    background-image: url("../img/slider/madela.jpg"); }
   .seq .seq-title {
     display: inline-block;
     position: absolute;
@@ -155,7 +138,7 @@
       bottom: -6px;
       padding: .2em .6em;
       background: #b3ff41;
-      color: black;
+      color: #1c1532;
       font-family: 'Dosis', sans-serif;
       font-weight: 700;
       text-decoration: none; }
@@ -169,11 +152,11 @@
       visibility: visible; }
     .seq.seq-active .seq-title {
       bottom: 70px; }
-  @media screen and (min-width: 320px) and (max-width: 620px) {
+  @media screen and (min-width: 200px) and (max-width: 640px) {
     .seq .seq-pagination > * {
-      width: 10px;
-      height: 10px;
-      margin: 0 2%; }
+      width: 5px;
+      height: 5px;
+      margin: 1% 2%; }
     .seq .seq-title p {
       display: none; } }
   @media only screen and (min-width: 480px) {
