@@ -12,14 +12,6 @@
     .page {
       flex: 100%;
       max-width: 100%; } }
-  @media screen and (min-width: 30em) {
-    .page {
-      flex: 100%;
-      max-width: 100%; } }
-  @media screen and (min-width: 48em) {
-    .page {
-      flex: 100%;
-      max-width: 100%; } }
   @media screen and (min-width: 64em) {
     .page {
       display: flex;

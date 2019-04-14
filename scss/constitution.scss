@@ -28,14 +28,6 @@
         flex: 100%;
         max-width: 100%;
     }
-    @include mobileFirst(480) {
-        flex: 100%;
-        max-width: 100%;
-    }
-    @include mobileFirst(768) {
-        flex: 100%;
-        max-width: 100%;
-    }
     @include mobileFirst(1024) {
         display: flex;
         flex-flow: column wrap;

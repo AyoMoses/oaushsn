@@ -14,6 +14,11 @@
 @import "../css/events-and-news.css";
 @import "../css/sequence-theme.pop-slide.css";
 
+@mixin deskTopFirst($media) {
+  @media screen and (max-width: $media/16+em) { @content; }
+}
+
+
 @font-face {
   font-family: "Roboto";
   font-style: normal;
@@ -110,6 +115,45 @@ img {
   max-width: 100%;
 }
 
+.wave {
+  position: absolute;
+  width: 100%;
+  height: 143px;
+  bottom: 80px;
+  left: 0;
+  background: url(../img/wave.png);
+  animation: animate 10s linear infinite;
+
+  &:before {
+    content: '';
+    width: 100%;
+    height: 143px;
+    background: url(../img/wave.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    animation: animate-reverse 10s linear infinite;
+
+  }
+  &:after {
+    content: '';
+    width: 100%;
+    height: 140px;
+    background: url(../img/wave.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+    animation-delay: -5s;
+    animation: animate 20s linear infinite;
+
+  }
+
+  @include deskTopFirst(1020) {
+    bottom: 120px;
+  }
+}
 
 /*scroll to top*/
 
@@ -151,3 +195,21 @@ img {
   text-align: center;
 }
 // END OF SCROLL TO TOP
+
+@keyframes animate {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 1360px;
+  }
+}
+
+@keyframes animate-reverse {
+  0% {
+    background-position: 1360px;
+  }
+  100% {
+    background-position: 0;
+  }
+}
