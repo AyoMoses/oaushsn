@@ -118,7 +118,7 @@
       word-spacing: -0.02em; } }
 
 .secImg-container {
-  max-width: 95%;
+  max-width: 92%;
   margin: 0 auto;
   overflow-x: hidden;
   border-radius: 1em;
@@ -172,7 +172,8 @@
       background: url(../img/gallery/7-m.jpg) no-repeat; } }
   @media screen and (min-width: 64em) {
     .secImg__inner-2 {
-      background: url(../img/gallery/7-m.jpg) no-repeat; } }
+      background: url(../img/gallery/7-m.jpg) no-repeat;
+      max-width: 100%; } }
 
 .sub-img__header {
   text-align: center;
@@ -215,7 +216,7 @@ h2 {
   background-color: #ffffff;
   border-radius: 0.3em;
   max-width: 300px;
-  height: 480px;
+  height: auto;
   margin-left: 0.5em;
   margin-right: 0.5em;
   margin-bottom: 0.6em;
@@ -224,10 +225,11 @@ h2 {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
   .card img {
     max-width: 100%;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     object-position: center;
     object-fit: cover;
-    border-radius: 10em;
+    border-radius: 100%;
     padding: .3em .3em; }
 
 .card:hover {
