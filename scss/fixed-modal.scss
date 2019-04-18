@@ -12,6 +12,7 @@
     background-color: $white;
     max-width: 1080px;
     margin: 2em auto;
+    box-shadow: $box-shadow;
     
 
     & p {
@@ -93,7 +94,7 @@
         height: auto;
 
         & h2 {
-            font-size: 1.5em;
+            font-size: 1.2em;
         }
     }
     @include deskTopFirst(658) {
@@ -104,7 +105,7 @@
         right: 10%;
 
         & h2 {
-            font-size: 1.3em;
+            font-size: 1.1em;
         }
     }
 }
