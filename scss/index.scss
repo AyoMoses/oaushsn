@@ -11,28 +11,16 @@
     @media screen and (max-width: $media/16+em) { @content; }
 }
 
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 300;
-  src: local("Roboto Light"), local("Roboto-Light"),
-  url(https://fonts.gstatic.com/roboto.woff2) format('woff2'),
-  url(https://fonts.gstatic.com/roboto.woff) format('woff');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Quicksand';
-  src: url(../font/quicksand/quicksand.ttf)  format('truetype');
-}
-@font-face {
-  font-family: 'Intro';
-  src: url(../font/intro/intro.otf)  format('truetype');
-}
-
 //Welcome page tile row
 .tile-container {
     margin: 2em auto;
     max-width: 1080px;
+    justify-content: center;
+    text-align: left;
+
+    @include deskTopFirst(658) {
+        margin: 2em 2em;
+    }
 }
 
 .tile-row {
@@ -52,8 +40,8 @@
         flex-flow: column wrap;
 
         & > * { /*Makes column with equal widht*/
-            flex: 100%;
-            max-width: 100%;
+            flex: 95%;
+            max-width: 95%;
         }
 
         & > * + * {
