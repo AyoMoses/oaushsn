@@ -1,5 +1,10 @@
 .events-hero {
   background: url(../img/event-hero.jpg) no-repeat;
+  transition: background .3s linear .1s;
+  -webkit-transition: background .3s linear .1s;
+  -moz-transition: background .3s linear .1s;
+  -ms-transition: background .3s linear .1s;
+  -o-transition: background .3s linear .1s;
   display: flex;
   object-fit: cover;
   background-clip: border-box;
